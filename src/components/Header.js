@@ -1,9 +1,9 @@
 import React from "react";
 import {
     BrowserRouter as Router, 
-    useHistory,
+//    useHistory,
     Link,
-    Switch,
+//    Switch,
     Route
 } from "react-router-dom";
 import { RUTAS } from "../assets/helpers/rutas";

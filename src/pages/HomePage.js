@@ -2,7 +2,6 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import Hero from "../components/Hero";
 import Features from "../components/Features";
-import { RUTAS } from "../assets/helpers/rutas";
 
 const HomePage = () => {
     const history = useHistory();

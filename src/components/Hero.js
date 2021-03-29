@@ -1,17 +1,10 @@
 import React from "react";
-import {
-    withRouter,
-    BrowserRouter as Router,
-    Link, 
-    useHistory, 
-    Switch} from "react-router-dom";
 import {RUTAS} from "../assets/helpers/rutas"
 import "../css/Hero.css";
 import Button from "./Button";
 
  
 const Hero = ({breadCrums, titleHero, textIntro, type1, type2, children1, children2,ctaBtn1, ctaBtn2,...props}) => {
-    const history = useHistory();
     return (
         <div className="HeroContainer">
             <a className="BreadCrums" href={RUTAS.inicio}>
