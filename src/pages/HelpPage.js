@@ -1,12 +1,9 @@
 import React from "react";
 
-function HelpPage () {
+const HelpPage = () => {
     return(
-        <div id="Body">
-            <h1>AYUDA</h1>
-        </div>
+        <h1>AYUDA</h1>
     );
-
 }
 
 export default HelpPage;

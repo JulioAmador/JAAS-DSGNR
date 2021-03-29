@@ -1,0 +1,42 @@
+.header {
+    background: linear-gradient(0, rgb(19, 19, 19), #2e2e2e);
+    min-height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+.header > * {
+    text-decoration: none;
+    font-size: 12pt;
+    font-family: Kanit-SemiBold;
+}
+  
+.header > * :hover {
+    color: #D7F500;
+    text-decoration: none;
+}
+  
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 40px;
+}
+  
+.header-nav-link {
+    color: rgb(170, 170, 170);
+    padding: 0 1rem;
+    list-style: none;
+    text-decoration: none;
+}
+
+.nav-logo {
+    height: 40px;
+    margin-left: 40px;
+}
+
+body {
+    background-color: #242424;
+}

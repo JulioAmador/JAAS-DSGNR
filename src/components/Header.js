@@ -1,39 +1,45 @@
-import React from 'react';
+import React from "react";
 import {
-    BrowserRouter as Router,
+    BrowserRouter as Router, 
+    useHistory,
+    Link,
     Switch,
-    Route,
-    Link
-  } from "react-router-dom";
-  import {RUTAS} from "../helpers/rutas";
-  import HomePage from "../pages/HomePage";
-  import WeArePage from "../pages/WeArePage";
-  import ServicesPage from "../pages/ServicesPage";
-  import FormPage from "../pages/FormPage";
-  import HelpPage from "../pages/HelpPage";
-  import logoHome from "../images/logohome.svg";
+    Route
+} from "react-router-dom";
+import { RUTAS } from "../assets/helpers/rutas";
+import HomePage from "../pages/HomePage";
+import WeArePage from "../pages/WeArePage";
+import ServicesPage from "../pages/ServicesPage";
+import FormPage from "../pages/FormPage";
+import HelpPage from "../pages/HelpPage";
+import logohome from "../assets/images/logohome.svg";
+import "../css/Header.css";
 
-  function Header () {
-      return (
-          <div>
-              <Router>
-                  <nav className="NavApp">
-                      <Link to={RUTAS.inicio}>
-                      <img id="logoHome" src={logoHome} alt="logotipo"></img></Link>
-                      <Link to={RUTAS.nosotros}>QUIENES SOMOS</Link>
-                      <Link to={RUTAS.servicios}>SERVICIOS</Link>
-                      <Link to={RUTAS.consulta}>CONSULTA</Link>
-                      <Link to={RUTAS.ayuda}>AYUDA</Link>
+const Header = () => {
+    return(
+        <>
+            <Router>
+                <header className="header">
+                    <a href={RUTAS.inicio}>
+                        <img className="nav-logo" src={logohome} alt="Logo Brand"/>
+                    </a>
+                    <nav className="header-nav">
+                        <Link className="header-nav-link" to = {RUTAS.nosotros}>QUIENES SOMOS</Link>
+                        <Link className="header-nav-link" to = {RUTAS.servicios}>SERVICIOS</Link>
+                        <Link className="header-nav-link" to = {RUTAS.consulta}>CONSULTA</Link>
+                        <Link className="header-nav-link" to = {RUTAS.ayuda}>AYUDA</Link>
                     </nav>
-                    <Route exact path={RUTAS.inicio} component={HomePage} />
-                    <Route path={RUTAS.nosotros} component={WeArePage} />
-                    <Route path={RUTAS.servicios} component={ServicesPage} />
-                    <Route path={RUTAS.consulta} component={FormPage} />
-                    <Route path={RUTAS.ayuda} component={HelpPage} />
+                </header>
+                <body className="">
+                    <Route exact path = {RUTAS.inicio} component = { HomePage } />
+                    <Route path = {RUTAS.nosotros} component = { WeArePage } />
+                    <Route path = {RUTAS.servicios} component = { ServicesPage } />
+                    <Route path = {RUTAS.consulta} component = { FormPage } />  
+                    <Route path = {RUTAS.ayuda} component = { HelpPage } />
+                </body>
+            </Router>   
+        </>
+    );
+}
 
-                </Router>
-            </div>
-      );
-    }
-
-  export default Header;
+export default Header;

@@ -1,12 +1,9 @@
 import React from "react";
 
-function FormPage () {
+const FormPage = () => {
     return(
-        <div id="Body">
-            <h1>CONSÚLTANOS</h1>
-        </div>
+        <h1>FORMULARIO DE CONSULTA</h1>
     );
-
-}
+} 
 
 export default FormPage;

@@ -1,21 +1,19 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
 
-
-
-const Button = ({ type, className, children, ...props }) => {
-    const history = useHistory();
+const Button = ({type, className, children, ...props}) => {
+    
     return (
         <button
         {...props}
         className={`btn btn-${
             type === "primary" || type === "secondary" || type === "outline"
             ? type
-            : ""
+            : "no-btn"
         } ${className ? className : ""}`}
         >{children}
         </button>
     );
 };
 
-export default Button
+
+export default Button;

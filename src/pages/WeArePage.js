@@ -1,12 +1,14 @@
 import React from "react";
 
-function WeArePage () {
-    return(
-        <div id="Body">
-            <h1>QUIÉNES SOMOS</h1>
-        </div>
+
+const WeArePage = () => {
+    return (
+        <>
+        <h1>QUIÉNES SOMOS</h1>
+        </>
     );
 
 }
+
 
 export default WeArePage;

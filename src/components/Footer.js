@@ -1,39 +1,73 @@
 import React from "react";
 import {useState} from "react";
-import {Container, TextField} from "@material-ui/core";
-import '../App.css'; 
+import Button from "./Button";
+import '../css/Footer.css';
+import {TextField, withStyles} from "@material-ui/core";
 
-function Footer () {
-    const[mail, setMail]= useState('')
-    const handleSendMail = () => {
-        mail ?  alert("Gracias por Suscribirte"): alert("Algo salió mal al escribir tu correo")
+const CustomInput = withStyles({
+    root: {
+      "& .MuiInputBase-root": {
+        backgroundColor: "trasparent",
+        overflow: "hidden",
+        borderRadius: "6px",
+        color: "white"
+      },
+      "& .MuiFormLabel-root": {
+        color: "#606060"
+      },
+      "& label.Mui-focused": {
+        color: "#02ae9e"
+      },
+      "& .MuiInput-underline:after": {
+        borderBottomColor: "#02ae9e"
+      },
+      "& .MuiOutlinedInput-root": {
+        "& fieldset": {
+          border: "2px solid #02ae9e"
+        },
+        "&:hover fieldset": {
+          border: "3px solid #42eadb"
+        },
+        "&.Mui-focused fieldset": {
+          borderColor: "#42eadb"
         }
-    return(
-    <div className="Footer">
-        <h3>Suscríbete</h3>
-        <hr id="separador16"/>
-        <form>
-            <TextField 
-            id="outlined-secondary" 
-            type="email"
-            className="Mail" noValidate
-            variant="outlined"
-            size="small"
-            label="Mail"
-            value={mail}
-            onChange={(e) => setMail(e.target.value)}
-            required
-            error={!mail}/>
-            <button 
-            id="SmallFilledButton"
-            onClick={handleSendMail}
-            >SUSCRIBIRSE</button>
-        </form>
-    </div>
+      }
+    }
+  })(TextField);
+
+
+export default function Footer() {
+    const [mail, setMail] = useState('')
+    const handleSendMail = () => {
+        mail ?
+        alert("Gracias por suscribirte")
+        : 
+        alert("Algo salio mal al escribir tu correo. Vuelve a intentarlo")
+    }
+    return (
+        <>
+            <div className="footer">
+                <h3 className="fotter-title">Suscríbete</h3>
+                <form>
+                    <CustomInput 
+                        className="form-input"
+                        label="Correo"
+                        variant="outlined"
+                        type="email"
+                        noValidate
+                        size="small"
+                        onChange={(e) => setMail(e.target.value)}
+                        required
+                    />
+                    <Button
+                        type="primary"
+                        className=""
+                        children="SUSCRÍBETE"
+                        onClick={handleSendMail}
+                    />
+                </form>
+            </div>
+        </>
     );
 }
-    
 
-
-
-export default Footer;

@@ -1,0 +1,74 @@
+.HeroContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: url(../assets/images/image_homehero.png);
+    background-size: cover;
+    font-family: Kanit-Light;
+    src: url("../assets/fonts/kanit/Kanit-Light.ttf") format("truetype");
+}
+.HeroContent {
+    color: #fff;
+    padding: 100px 20px 20px 20px;
+    text-shadow: 1px 1px 6px #000000;
+}
+.BreadCrums {
+    color: rgb(180, 180, 180);
+    padding-top: 20px;
+    padding-left: 40px;
+    text-decoration: none;
+    font-family: Kanit-light;
+    font-size: 12pt;
+}
+.BreadCrums:hover {
+    color: teal;
+    cursor: pointer;
+}
+.HeroTitle {
+    text-align: left;
+    margin: 15px 0 0;
+    font-family: Kanit-Bold;
+    src: url("../assets/fonts/kanit/Kanit-Bold.ttf") format("truetype");
+    font-size: 40pt;
+    line-height: 40px; 
+}
+.HeroTitle-yellow {
+    color: #e1ff00;
+    text-shadow: 5px #2e2e2e;
+}
+.HeroTextIntro {
+    font-size: 20pt;
+    padding: 20px 30px 20px 20px;
+    font-family: Kanit-light;
+    src: url("../assets/fonts/kanit/Kanit-SemiBold.ttf") format("truetype");
+}
+
+.btn-primary {
+    outline: none;
+    background-color: #02AE9E;
+    border: none;
+    border-radius: 6px;
+    height: 40px;
+    min-width: 200px;
+    margin: 4px;
+    color: white;
+    text-align: center;
+    padding: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-outline {
+    outline: none;
+    background-color: transparent;
+    border: 2pt solid #02AE9E;
+    border-radius: 6px;
+    height: 40px;
+    min-width: 200px;
+    margin: 4px;
+    color: #02AE9E;
+    text-align: center;
+    padding: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}

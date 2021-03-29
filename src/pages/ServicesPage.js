@@ -1,12 +1,9 @@
 import React from "react";
 
-function ServicesPage () {
+const ServicesPage = () => {
     return(
-        <div id="Body">
-            <h1>CONÓCE NUESTROS SERVICIOS</h1>
-        </div>
+        <h1>CONOCE NUESTROS SERVICIOS</h1>
     );
-
 }
 
 export default ServicesPage;

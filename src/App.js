@@ -1,21 +1,24 @@
-import React from 'react';
-import {Container} from "@material-ui/core"
+import React from "react";
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
-  Link
-} from "react-router-dom";
-import Header from "./components/Header"
-import Footer from "./components/Footer"
-import './App.css';
+  Link,
+  Switch
+} from "react-router-dom"
+import { RUTAS } from "./assets/helpers/rutas";
+import Layout from "./components/Layout";
+import HomePage from "./pages/HomePage";
+import WeArePage from "./pages/WeArePage";
+import ServicesPage from "./pages/ServicesPage";
+import FormPage from "./pages/FormPage";
+import HelpPage from "./pages/HelpPage";
+//import './App.css';
 
-function App() {
+const App = ()=> {
   return (
-    <div className="App">
-      <Header />
-      <Footer/>
-    </div>
+    <>
+      <Layout></Layout>
+    </>
   );
 }
 

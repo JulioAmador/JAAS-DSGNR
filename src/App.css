@@ -1,203 +1,48 @@
+.container {
+  display:flex;
+  flex-direction: column;
+  padding: 0 6rem;
+}
+
 body {
+  margin:0;
   background-color: #242424;
 }
-#logoHome {
-  height: 5vmin;
+/*.App {
+  text-align: center;
 }
 
-.NavApp {
-  background: linear-gradient(0, rgb(19, 19, 19), #2e2e2e);
-  min-height: 50px;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  }
-.NavApp > * {
-  color: rgb(170, 170, 170);
-  font-family: Kanit-SemiBold;
-  src: url("./assets/fonts/kanit/Kanit-Light.ttf") format("truetype");
-  text-decoration: none;
-  font-size: 12pt;
-}
-
-.NavApp>*:hover {
-  color: #D7F500;
-}
-.BreadCrums {
-  position:absolute;
-  z-index: 5;
-  padding-left: 20px;
-  color:rgb(180, 180, 180);
-  text-decoration: none;
-  font-size: 12pt;
-  font-family: Kanit-light;
-  src: url("./assets/fonts/kanit/Kanit-Light.ttf") format("truetype");
-}
-.BreadCrums:hover {
-  z-index: 5;
-  color:teal;
-  cursor: pointer;
-}
-.H1 {
-  text-align: left;
-  font-size: 40pt;
-  font-family: Kanit-Bold;
-  src: url("./assets/fonts/kanit/Kanit-Bold.ttf") format("truetype");
-}
-
-.HeroContainer {
-  display:flex;
-  justify-content: flex-start;
-  width: 100%;
-}
-.HeroContent {
-  color:#ffffff;
-  text-shadow: 1px 1px 2px #2e2e2e;
-  position: absolute;
-  width: 100%;
-  z-index: 3;
-}
-.HeroTitle {
-  text-align: left;
-  font-size: 40pt;
-  line-height: 40px;
-  position: relative;
-  z-index: 3;
-  padding: 100px 20px 20px 20px;
-  text-shadow: 5px #2e2e2e;
-  font-family: Kanit-Bold;
-  src: url("./assets/fonts/kanit/Kanit-Bold.ttf") format("truetype");
-}
-.HeroTitleYellow {
-  position: relative;
-  color: #D7F500;
-  z-index: 7;
-  text-align: left;
-}
-
-.HeroTextIntro {
-  position: relative;
-  z-index: 3;
-  justify-self: center;
-  font-size: 24px;
-  padding: 20px 30px 20px 20px;
-  font-family: Kanit-Light;
-  src: url("./assets/fonts/kanit/Kanit-Light.ttf") format("truetype");
-}
-
-.HeroImage {
-  position: absolute;
-  z-index: 0;
-  width:100%;
-  }
-
-a:focus {
-  outline: 0;
-}
-
-.btn-primary {
-  position: relative;
-  z-index: 5;
-  outline: none;
-  background-color: #02AE9E;
-  border: none;
-  border-radius: 6px;
-  height: 40px;
-  box-sizing:unset;
-  min-width:200px;
-  margin: 4px;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
   color: white;
-  text-align: center;
-  padding: 4px;
-  font-size: 16px;
-  font-family: Kanit-Bold;
-  src: url("./assets/fonts/kanit/Kanit-Bold.ttf") format("truetype");
-  cursor: pointer;
 }
 
-.btn-outline {
-  position: relative;
-  outline: none;
-  z-index: 5;
-  background-color: rgba(255, 255, 255, 0);
-  border: 2px solid #02AE9E;
-  border-radius: 6px;
-  height: 36px;
-  box-sizing:unset;
-  min-width:200px;
-  color: #02AE9E;
-  text-align: center;
-  padding: 4px;
-  margin: 4px;
-  box-align: space-around;
-  font-size: 16px;
-  font-family: Kanit-Bold;
-  src: url("./assets/fonts/kanit/Kanit-Bold.ttf") format("truetype");
-  cursor: pointer;
-}
-#SmallFilledButton {
-  background-color: #02AE9E;
-  border: none;
-  border-radius: 6px;
-  height: 36px;
-  box-sizing:unset;
-  width:30%;
-  margin-top: 0px;
-  margin-left: 8px;
-  color: white;
-  text-align: center;
-  padding: 2px;
-  font-size: 16px;
-  font-family: Kanit-Bold;
-  src: url("./assets/fonts/kanit/Kanit-Bold.ttf") format("truetype");
-  cursor: pointer;
+.App-link {
+  color: #61dafb;
 }
 
-.Mail {
-  background-color: #ffffff;
-  border: 2px solid #02AE9E;
-  text-decoration: none;
-  border-radius: 6px;
-  box-sizing:unset;
-  width:45%;
-  margin: 4px;
-  padding: 8px;
-  color: #2e2e2e;
-  font-size: 16px;
-  font-family: Kanit-light;
-  src: url("./assets/fonts/kanit/Kanit-Bold.ttf") format("truetype");
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
-
-#separador16 {
-  margin:16px;
-  color:rgba(255, 255, 255, 0);
-  border:none;
-}
-#separador32 {
-  margin:32px;
-  color:rgba(255, 255, 255, 0);
-  border:none;
-}
-.Footer {
-  position: absolute;
-  bottom: -200px;
-  background-color: #121212;
-  color: rgb(180, 180, 180);
-  min-height: 200px;
-  width: 100%;
-  padding: 20px;
-  font-size: 16px;
-  font-family: Kanit-Bold;
-  src: url("./assets/fonts/kanit/Kanit-Bold.ttf") format("truetype");
-}
-
-.Contenedor {
-  position: absolute;
-  z-index: 3;
-  bottom: 100px;
-  margin: 10px;
-  padding: 10px;
-  
-}
-
-
